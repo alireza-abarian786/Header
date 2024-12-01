@@ -253,8 +253,22 @@ img{
 
 }
 @media screen and (max-width:830px) {
-    .header-top-menu{
-        display: none;
+    .header-top-menu {
+        background-color: #333;
+        width: 350px;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    
+    .header-top-menu ul{
+        /* display: none; */
+            flex-direction: column;
+            position: absolute;
+            width: max-content;
+            top: 0;
     }
     .ham-berger-menu{
         position: fixed;
