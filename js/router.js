@@ -1,27 +1,32 @@
+let word = 'Header Project'
 let router = {
+    404: {
+        template: './404.html',
+        title: `${word} | 404`
+    },
     '/': {
         template: './index.html',
-        title: ''
+        title: `${word} | Home`
     },
     '/about': {
         template: './about.html',
-        title: ''
+        title: `${word} | About`
     },
     '/services': {
         template: './services.html',
-        title: ''
+        title: `${word} | Services`
     },
     '/toturial': {
         template: './toturial.html',
-        title: ''
+        title: `${word} | Toturial`
     },
     '/blog': {
         template: './blog.html',
-        title: ''
+        title: `${word} | Blog`
     },
     '/courses': {
         template: './courses.html',
-        title: ''
+        title: `${word} | Courses`
     },
 }
 

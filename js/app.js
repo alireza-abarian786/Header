@@ -3,6 +3,10 @@ import router from "./router.js";
 let iconBar = document.querySelector(".icon-bar")
 let iconClose = document.querySelector(".icon-close")
 let ulElem = document.querySelector('.top-menu ul')
+let formElem = document.querySelector(".header-bottom form")
+let inputElem = document.querySelector(".header-bottom form input")
+let h1Elem = document.querySelector(".header-bottom h1")
+
 
 iconBar.addEventListener('click' , () => {
     ulElem.style.left = "0"
@@ -40,5 +44,15 @@ async function root () {
 }
 
 window.onpopstate = root
+
+
+formElem.addEventListener('submit' , (e) => {
+    e.preventDefault()
+    console.log(window.location.pathname = "/courses");
+    
+    h1Elem.innerHTML = e.target.children[0].value
+    changeUrl(e)
+    
+})
 
 
