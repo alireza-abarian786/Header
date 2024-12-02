@@ -24,8 +24,7 @@ document.addEventListener("click" , (e) => {
     }
     
     changeUrl(e)
-    console.log(1);
-    
+    console.log(1);    
 })
 
 function changeUrl (e) {
@@ -35,24 +34,14 @@ function changeUrl (e) {
 }
 
 async function root () {
-    console.log(3);
-    let url = window.location.pathname
-    let route = router[url] || router[404]
+    // url = window.location.pathname  
+    console.log(window.location.pathname );
+      
+    let route = router[window.location.pathname] || router[404]
+    console.log(route);
     let doc = await fetch(route.template).then(res => res.text())
     document.querySelector('html').innerHTML = doc
     document.title = route.title
 }
 
 window.onpopstate = root
-
-
-formElem.addEventListener('submit' , (e) => {
-    e.preventDefault()
-    console.log(window.location.pathname = "/courses");
-    
-    h1Elem.innerHTML = e.target.children[0].value
-    changeUrl(e)
-    
-})
-
-
