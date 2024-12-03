@@ -8,13 +8,9 @@ body{
     height: 100vh;
 }
 
-
-
-
 li , a{
     list-style-type: none;
     text-decoration: none;
-    color: #333333;
 }
 
 .header{
@@ -42,17 +38,17 @@ li , a{
 .top-menu ul{
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     width: 100%;
 }
 
-.header-top-menu li a{
+.top-menu li a{
     font-size: 1rem;
     font-weight: 500;
-     padding: 0.5rem 1rem; 
-     color: #333333; 
+    padding: 0.5rem 1rem; 
+    color: #333333;
 }
-.active{
+.top-menu .active{
     background-color: blueviolet;
     color: #fff;
     padding: 0.5rem 2rem;
@@ -76,6 +72,7 @@ li , a{
     width: 40px;
     cursor: pointer;
     display: none;
+    transition: 2s ease-in-out 0.1s;
 }
 .icon-close{
     display: none;
@@ -94,11 +91,10 @@ img{
 }
 
 .header-bottom{
-    max-width: 1200px;
-    margin: auto;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 100%;
 }
 
@@ -170,7 +166,7 @@ img{
 .header-bottom-right .text-img{
     background: linear-gradient(to left , rgba(92,72,238,0.2) , rgba(15,30,106,0.4) );
     backdrop-filter: blur(30px);
-    padding: 1rem 2rem;
+    padding: 5px 25px 5px 5px;
     width: 50%;
     color: #fff;
     border-radius: 10px;
@@ -184,6 +180,17 @@ img{
     margin-bottom: 0.5rem;
     list-style: disc;
 }
+.header-bottom-right .text-img ul{
+    padding: 0;
+    margin: 0;
+}
+
+.header-bottom-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
 
 /* ------------------------------------------------------------------------------ */
 
@@ -196,16 +203,17 @@ img{
     }
 
     .top-menu ul{
-        width: 35%;
-        background: linear-gradient(to right , rgba(92,72,238,0.3) , rgba(15,30,106,1) );
+        width: 70%;
+        background: linear-gradient(to right , rgba(92,72,238,0.98) , rgba(130 ,83 ,235 ,1) );
         top: 0;
-        left: -340px;
+        left: 0;
         height: 100vh;
         flex-direction: column;
         position: absolute;
-        padding: 150px 0 0 0;
-        transition: all 0.4s;
+        padding: 100px 0 0 0;
+        transition: 2s ease-in-out 0.1s;
         color: #fff;
+        display: none;
     }
     
     .top-menu ul a {
@@ -224,8 +232,16 @@ img{
     }
 
     .header-bottom-left form {
-        width: 59%;
+        width: 100%;
+        justify-content: center;
     }
 
+}
+
+@media screen and (max-width: 768px) {
+    .header-bottom-right .text-img {
+        font-size: 10px;
+        padding: 5px 25px 5px 5px;
+    }
 }
   
