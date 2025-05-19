@@ -1,8 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar() {
+  const location = useLocation();
+
+  const isActive = (path) => {
+    return location.pathname === path ? "nav-link active" : "nav-link";
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-container">
@@ -13,22 +19,22 @@ export default function Navbar() {
         <div className="nav-menu">
           <ul>
             <li>
-              <Link to="/" className="nav-link">صفحه اصلی</Link>
+              <Link to="/" className={isActive("/")}>صفحه اصلی</Link>
             </li>
             <li>
-              <Link to="/about" className="nav-link">درباره ما</Link>
+              <Link to="/about" className={isActive("/about")}>درباره ما</Link>
             </li>
             <li>
-              <Link to="/services" className="nav-link">خدمات</Link>
+              <Link to="/services" className={isActive("/services")}>خدمات</Link>
             </li>
             <li>
-              <Link to="/toturial" className="nav-link">آموزش</Link>
+              <Link to="/toturial" className={isActive("/toturial")}>آموزش</Link>
             </li>
             <li>
-              <Link to="/blog" className="nav-link">وبلاگ</Link>
+              <Link to="/blog" className={isActive("/blog")}>وبلاگ</Link>
             </li>
             <li>
-              <Link to="/courses" className="nav-link">دوره‌ها</Link>
+              <Link to="/courses" className={isActive("/courses")}>دوره‌ها</Link>
             </li>
           </ul>
         </div>
