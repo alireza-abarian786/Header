@@ -94,8 +94,8 @@ img{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 100%;
+    justify-content: center;
+    height: 90vh;
 }
 
 .header-bottom-left{
@@ -147,6 +147,10 @@ img{
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
+.page:hover {
+    color: blueviolet;
+}
+
 
 
 .header-bottom-right{
@@ -172,7 +176,7 @@ img{
     border-radius: 10px;
 
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-60%,30%);
 }
