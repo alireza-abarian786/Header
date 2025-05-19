@@ -1,14 +1,15 @@
- *{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: "picoopic";
+
+body {
+    font-family: Vazirmatn;
     height: 100vh;
 }
 
-li , a{
+li, a {
     list-style-type: none;
     text-decoration: none;
 }
@@ -35,37 +36,6 @@ li , a{
     width: max-content;
 }
 
-.top-menu ul{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-}
-
-.top-menu li a{
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem; 
-    color: #333333;
-}
-.top-menu .active{
-    background-color: blueviolet;
-    color: #fff;
-    padding: 0.5rem 2rem;
-    border-radius: 5px;
-}
-
-
-.header-top-menu li li:hover{
-    color: blueviolet;
-}
-.header-top-menu li:not(:last-child):hover a{
-    color: blueviolet;
-}
-.header-top-menu li a.active:hover{
-    background-color: rgb(67, 6, 124);
-}
-
 /* ---------------------------------------------- */
 
 .icon-bar{
@@ -86,7 +56,7 @@ li , a{
 
 /* --------------------------------------------------------------------------------------- */
 
-img{
+img {
     width: 100%;
 }
 
@@ -147,11 +117,6 @@ img{
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-.page:hover {
-    color: blueviolet;
-}
-
-
 
 .header-bottom-right{
     display: grid;
@@ -198,37 +163,13 @@ img{
 
 /* ------------------------------------------------------------------------------ */
 
-@media screen and (max-width:992px) {
-    .top-logo {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .top-menu ul{
-        width: 70%;
-        background: linear-gradient(to right , rgba(92,72,238,0.98) , rgba(130 ,83 ,235 ,1) );
-        top: 0;
-        left: 0;
-        height: 100vh;
-        flex-direction: column;
-        position: absolute;
-        padding: 100px 0 0 0;
-        transition: 2s ease-in-out 0.1s;
-        color: #fff;
-        display: none;
-    }
-    
-    .top-menu ul a {
-        color: #fff;
-    }
-
+/* Responsive Design */
+@media screen and (max-width: 992px) {
     .header-bottom {
         flex-direction: column;
     }
 
-    .header-bottom-left{
+    .header-bottom-left {
         min-height: fit-content;
         margin: 50px 0;
         text-align: center;
@@ -239,7 +180,6 @@ img{
         width: 100%;
         justify-content: center;
     }
-
 }
 
 @media screen and (max-width: 768px) {
