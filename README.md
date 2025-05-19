@@ -59,5 +59,5 @@ my-header/
 - آموزش
 - وبلاگ
 - دوره‌ها
-- 
-- GitHub: [Your GitHub Profile](https://github.com/alireza-abaran786)
+
+GitHub: [alireza-abaran786](https://github.com/alireza-abaran786)
