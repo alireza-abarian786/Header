@@ -1,4 +1,4 @@
-import "./app.css";
+import "./header.css";
 import HeaderContent from "../HeaderContent/HeaderContent";
 
 export default function Home() {
